@@ -1,6 +1,6 @@
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(json => console.log(json))
+// fetch('https://jsonplaceholder.typicode.com/users')
+//   .then(response => response.json())
+//   .then(json => console.log(json))
 
 
 
@@ -55,11 +55,6 @@ function displayUser(allusers) {
 }
 
 
-
-
-
-
-
   // Collectiong & organizing users "STREET" through json
   fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
@@ -76,6 +71,7 @@ function displayUser(allusers) {
       strUL.appendChild(li);
     }
   }
+
 
   // Collectiong & organizing users "ZIPCODE" through json
   fetch('https://jsonplaceholder.typicode.com/users')
