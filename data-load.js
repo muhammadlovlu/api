@@ -4,7 +4,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 
 
-Collectiong & organizing users "REALNAME" through json
+// Collectiong & organizing users "REALNAME" through json
 fetch('http://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
   .then(json => showRealNames(json))
@@ -60,7 +60,7 @@ function displayUser(allusers) {
 
 
 
-  // Collectiong & organizing users Realname through json
+  // Collectiong & organizing users "STREET" through json
   fetch('https://jsonplaceholder.typicode.com/users')
   .then(response => response.json())
   .then(json => Street(json))
@@ -77,4 +77,19 @@ function displayUser(allusers) {
     }
   }
 
-  // Collectiong & organizing users Realname through json
+  // Collectiong & organizing users "ZIPCODE" through json
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(json => usersZipCode(json))
+
+  function usersZipCode(zip){
+    const zipCode = zip.map(x => x.address.zipcode);
+    const ul = document.getElementById("zip-container");
+    for (let i = 0; i < zipCode.length; i++) {
+      const codeZip = zipCode[i];
+      const li = document.createElement("li");
+      li.innerText = codeZip;
+      ul.appendChild(li);
+      
+    }
+  }
